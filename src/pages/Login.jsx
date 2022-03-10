@@ -3,6 +3,7 @@ import Loading from '../components/Loading';
 import { createUser } from '../services/userAPI';
 
 const MIN_USER_NAME_LENGTH = 3;
+const MIN_PASSWORD_LENGTH = 8;
 
 class Login extends Component {
   constructor() {
@@ -15,22 +16,26 @@ class Login extends Component {
   }
 
   handleChange = (event) => {
-    this.setState({ name: event.target.value });
+    if (event.target.id === "user-input") {
+      this.setState({ name: event.target.value });
+    } else {
+      this.setState({ password: event.target.value });
+    }
   }
 
   handleClick = () => {
-    const { history } = this.props;
     const { name } = this.state;
     const user = { name };
     this.setState({ loading: true }, async () => {
       await createUser(user);
-      history.push('search');
-    })
+      window.history.replaceState({}, undefined, '/search');
+      window.location.reload();
+    });
   }
 
   render() {
     const { handleChange, handleClick } = this;
-    const { name, loading } = this.state;
+    const { name, password, loading } = this.state;
     if (loading) return <Loading />;
 
     return (
@@ -39,6 +44,7 @@ class Login extends Component {
           type="text"
           onChange={handleChange}
           placeholder="Nome do Usuário"
+          id="user-input"
         />
         <input
           type="password"
@@ -48,7 +54,8 @@ class Login extends Component {
         <button
           type="button"
           onClick={handleClick}
-          disabled={name.length < MIN_USER_NAME_LENGTH}
+          disabled={name.length < MIN_USER_NAME_LENGTH
+            || password.length < MIN_PASSWORD_LENGTH}
         >
           Entrar
         </button>
