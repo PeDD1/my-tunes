@@ -1,6 +1,7 @@
 import Header from '..components/Header';
 import React, { Component } from 'react';
 import Loading from '../components/Loading';
+import Results from '../components/Results';
 import SearchBar from '../components/SearchBar';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 
@@ -39,6 +40,7 @@ class Search extends Component {
           handleChange={this.handleChange}
           searchField={searchText}
         />}
+        {artist && <Results artist={artist} albums={albums} />}
       </div>
     );
   }
