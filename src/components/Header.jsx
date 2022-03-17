@@ -37,7 +37,7 @@ class Header extends Component {
         </Link>
         <nav>
           <NavLink to="/search">
-            Procurar Músicas
+            Procurar Artistas
           </NavLink>
           <NavLink to="/favorites">
             Favoritos
