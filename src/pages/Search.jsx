@@ -1,5 +1,5 @@
-import Header from '..components/Header';
 import React, { Component } from 'react';
+import Header from '../components/Header';
 import Loading from '../components/Loading';
 import Results from '../components/Results';
 import SearchBar from '../components/SearchBar';
