@@ -10,11 +10,11 @@ class Favorites extends Component {
     this.state = {
       loading: true,
       favorites: [],
-    }
+    };
   }
 
   componentDidMount() {
-    this.componentDidMount();
+    this.onMount();
   }
 
   onMount = () => {
@@ -43,7 +43,7 @@ class Favorites extends Component {
     const { loading, favorites } = this.state;
 
     return (
-      <div>
+      <div data-testid="page-favorites">
         <Header />
         {(loading) ? <Loading />
           : (
@@ -53,6 +53,7 @@ class Favorites extends Component {
                 <MusicCard
                   showImage
                   key={favorite.trackId}
+                  music={favorite}
                   handleChange={this.handleChange}
                   checked={this.isFavorite(favorite)}
                   label="Favorita"
