@@ -43,7 +43,7 @@ class Favorites extends Component {
     const { loading, favorites } = this.state;
 
     return (
-      <div data-testid="page-favorites">
+      <div>
         <Header />
         {(loading) ? <Loading />
           : (
