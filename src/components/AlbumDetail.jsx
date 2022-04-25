@@ -7,9 +7,13 @@ class AlbumDetail extends Component {
     return (
       <div>
         <div>
-          <img src={artworkUrl100} alt="capa do álbum" />
-          <h2>{artistName}</h2>
-          <h5>{collectionName}</h5>
+          <img src={artworkUrl100} alt="artwork" />
+          <h2 data-testid="artist-name">
+            {artistName}
+          </h2>
+          <h5 data-testid="album-name">
+            {collectionName}
+          </h5>
         </div>
       </div>
     );

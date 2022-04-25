@@ -14,12 +14,11 @@ class MusicCard extends Component {
         <hr />
         <li>
           <div>
-            {showImage ? <img src={artworkUrl30} alt="capa da música" /> : null}
+            {showImage ? <img src={artworkUrl30} alt="artwork album" /> : null}
             {trackName}
           </div>
           <div>
-            <audio
-              src={previewUrl} controls>
+            <audio data-testid="audio-component" src={previewUrl} controls>
               <track kind="captions" />
               O seu navegador não suporta o elemento
               <code>audio</code>
@@ -32,6 +31,7 @@ class MusicCard extends Component {
                 id={trackId}
                 onChange={handleChange}
                 checked={checked}
+                data-testid={`checkbox-music-${trackId}`}
               />
               <span>{label}</span>
             </label>
