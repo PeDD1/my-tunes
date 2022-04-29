@@ -1,5 +1,5 @@
 .login-button {
-  background: #ff6710;
+  background: #10a7ff;
   border: none;
   border-radius: 0.5rem;
   color: #141414;
@@ -47,7 +47,8 @@
 }
 
 .logo {
-  padding: 20%;
-  height: 70%;
-  width: 70%;
+  margin-top: 15%;
+  padding: 15%;
+  height: 80%;
+  width: 80%;
 }
