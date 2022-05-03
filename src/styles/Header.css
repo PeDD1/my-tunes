@@ -1,0 +1,38 @@
+.header {
+  align-items: center;
+  background-color: #dc5100;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #141414;
+  display: flex;
+  height: 2rem;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.page-title {
+  font-size: 1.4rem;
+  margin: auto;
+  text-align: center;
+}
+
+.profile-top-btn {
+  left: 0.5rem;
+  position: absolute;
+}
+
+.search-top-btn {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0.5rem;
+}
+
+.favorite-top-btn {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 10rem;
+}

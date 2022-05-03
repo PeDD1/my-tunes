@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Loading from '../components/Loading';
 import { getUser, updateUser } from '../services/userAPI';
 
@@ -59,8 +59,7 @@ class ProfileEdit extends Component {
       return <Redirect to="/profile" />;
     }
     return (
-      <div data-testid="page-profile-edit">
-        <Header />
+      <div>
         {
           loading ? <Loading />
             : (
@@ -122,6 +121,7 @@ class ProfileEdit extends Component {
               </form>
             )
         }
+        <Footer />
       </div>
     );
   }

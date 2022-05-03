@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import AlbumDetail from '../components/AlbumDetail';
-import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Loading from '../components/Loading';
 import MusicCard from '../components/MusicCard';
 import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
@@ -58,8 +58,7 @@ class Album extends Component {
   render() {
     const { musics, loading } = this.state;
     return (
-      <div data-testid="page-album">
-        <Header />
+      <div>
         {loading ? <Loading />
           : (
             <div>
@@ -76,6 +75,7 @@ class Album extends Component {
                 <hr />
               </ul>
             </div>)}
+        <Footer />
       </div>
     );
   }
