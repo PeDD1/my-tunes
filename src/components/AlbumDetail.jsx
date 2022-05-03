@@ -8,10 +8,10 @@ class AlbumDetail extends Component {
       <div>
         <div>
           <img src={artworkUrl100} alt="artwork" />
-          <h2 data-testid="artist-name">
+          <h2>
             {artistName}
           </h2>
-          <h5 data-testid="album-name">
+          <h5>
             {collectionName}
           </h5>
         </div>

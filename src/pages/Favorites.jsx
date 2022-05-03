@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Loading from '../components/Loading';
 import MusicCard from '../components/MusicCard';
 import { getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
@@ -44,7 +44,7 @@ class Favorites extends Component {
 
     return (
       <div>
-        <Header />
+        <Footer />
         {(loading) ? <Loading />
           : (
             <div className="favorite-list">

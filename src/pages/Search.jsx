@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Loading from '../components/Loading';
 import Results from '../components/Results';
 import SearchBar from '../components/SearchBar';
@@ -34,13 +34,13 @@ class Search extends Component {
 
     return (
       <div>
-        <Header />
         {(loading) ? <Loading /> : <SearchBar
           handleClick={this.handleClick}
           handleChange={this.handleChange}
           searchField={searchText}
         />}
         {artist && <Results artist={artist} albums={albums} />}
+        <Footer />
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Loading from '../components/Loading';
 import { getUser } from '../services/userAPI';
 
@@ -35,7 +35,6 @@ class Profile extends Component {
 
     return (
       <div>
-        <Header />
         {loading ? <Loading />
           : (
             <div>
@@ -55,6 +54,7 @@ class Profile extends Component {
               </div>
             </div>
           )}
+        <Footer />
       </div>
     );
   }

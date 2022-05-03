@@ -18,7 +18,7 @@ class MusicCard extends Component {
             {trackName}
           </div>
           <div>
-            <audio data-testid="audio-component" src={previewUrl} controls>
+            <audio src={previewUrl} controls>
               <track kind="captions" />
               O seu navegador não suporta o elemento
               <code>audio</code>
@@ -31,7 +31,6 @@ class MusicCard extends Component {
                 id={trackId}
                 onChange={handleChange}
                 checked={checked}
-                data-testid={`checkbox-music-${trackId}`}
               />
               <span>{label}</span>
             </label>
