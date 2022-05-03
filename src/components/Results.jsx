@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/Results.css';
 
 class Results extends Component {
   render() {
@@ -9,7 +10,7 @@ class Results extends Component {
     if (albums.length === 0) return (<h4>Nenhum álbum foi encontrado</h4>);
 
     return (
-      <div>
+      <div className="results">
         <h3>
           Resultado de álbuns de:
           {' '}

@@ -4,7 +4,7 @@ import profileIcon from '../images/profileIcon.svg';
 import searchIcon from '../images/searchIcon.svg';
 import favoriteIcon from '../images/whiteHeartIcon.svg';
 import { getUser } from '../services/userAPI';
-import '../styles/Header.css';
+import '../styles/Footer.css';
 import Loading from './Loading';
 
 class Header extends Component {
@@ -36,7 +36,7 @@ class Header extends Component {
 
     return (
       <>
-        <header className="header">
+        <header className="footer">
           <Link className="profile-top-btn" to="/profile">
             <img
               value={user}

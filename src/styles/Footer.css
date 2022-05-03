@@ -1,6 +1,6 @@
-.header {
+.footer {
   align-items: center;
-  background-color: #dc5100;
+  background-image: linear-gradient(#76C3FB, #15507A);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   color: #141414;
   display: flex;
